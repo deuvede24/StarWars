@@ -97,4 +97,4 @@ export class StarshipsListComponent implements OnInit {
     return item.name; // Aquí puedes usar un identificador único si está disponible
   }
 }
-
+//
