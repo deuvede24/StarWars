@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<!--<div class="container mt-4">
   @if (starships$ | async; as resultObject) {
   @for (starship of resultObject; track $index) {
   <div class="card mb-3">
@@ -12,7 +12,25 @@
   } @else {
   <p>Loading starships...</p>
   }
+</div>-->
+
+<div class="starships-container">
+  @if (starships$ | async; as resultObject) {
+    @for (starship of resultObject; track $index) {
+      <a [routerLink]="['/starship', starship.url.split('/').slice(-2, -1)[0]]" class="card-link">
+        <div class="card mb-3 starship">
+          <div class="card-body">
+            <h2 class="card-title">{{ starship.name }}</h2>
+            <p class="card-text">Model: {{ starship.model }}</p>
+          </div>
+        </div>
+      </a>
+    }
+  } @else {
+    <p>Loading starships...</p>
+  }
 </div>
+
 
 <!--<div class="container mt-4">
   @if (starships$ | async; as starshipArray) {

@@ -1,14 +1,7 @@
-.starships-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #111;
-  color: #fff;
-  margin-top: 20px;  /* Ajusta la posición vertical */
-}
 
-.starship {
+
+
+/*.starship {
   width: 80%;
   max-width: 600px;
   background-color: #333;
@@ -21,9 +14,82 @@
   &:hover {
     background-color: #444;
   }
+}*/
+
+
+  
+ /*
+ .card {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  width: 100%;
+  height: 100%; 
+  
 }
 
-.starship h2 {
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+*/
+.starships-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+.starship {
+  width: 80%;
+  max-width: 600px;
+  min-height: 150px; /* Ajusta esto para mantener un alto uniforme */
+  background-color: #333;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center; /* Centrar el contenido */
+  height: 150px; /* Fijar la altura */
+  &:hover {
+    background-color: #444;
+  }
+}
+
+
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  width: 1000px; /* Ancho fijo para todas las tarjetas */
+  margin: 10px; /* Espaciado entre tarjetas */
+
+
+
+}
+
+
+
+/*.starship h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
@@ -31,7 +97,29 @@
 .starship p {
   font-size: 1.2em;
   color: #bbb;
+}*/
+
+/*.starship h2, .starship p {
+  margin: 0; /* Para ajustar márgenes 
+  text-align: center;
+}*/
+.starship h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.starship p {
+  font-size: 1.2em;
+  color: #bbb;
 }
 
-  
- 
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left!important;
+}
+
+.card-text {
+  font-size: 1rem;
+  text-align: left;
+  color: #bbb;
+}
