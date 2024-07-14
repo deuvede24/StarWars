@@ -1,14 +1,48 @@
-<p>starships-list works!</p>
-<div class="starships-container">
-    @for (starship of starships; track starship.name) {
-      <div class="starship">
-        <h2>{{ starship.name }}</h2>
-        <p>{{ starship.model }}</p>
+<div class="container mt-4">
+  @if (starships$ | async; as resultObject) {
+  @for (starship of resultObject; track $index) {
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ starship.name }}</h5>
+      <p class="card-text">Model: {{ starship.model }}</p>
+      <a [routerLink]="['/starship', starship.url.split('/').slice(-2, -1)[0]]" class="btn btn-primary">Details</a>
+    </div>
+  </div>
+  }
+  } @else {
+  <p>Loading starships...</p>
+  }
+</div>
+
+<!--<div class="container mt-4">
+  @if (starships$ | async; as starshipArray) {
+    @for (starship of starshipArray; track $index) {
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ starship.name }}</h5>
+          <p class="card-text">Model: {{ starship.model }}</p>
+          <a [routerLink]="['/starship', starship.url.split('/').slice(-2, -1)[0]]" class="btn btn-primary">Details</a>
+        </div>
       </div>
     }
-  </div>
-  
+  } @else {
+    <p>Loading starships...</p>
+  }
+</div>
 
+<div class="container mt-4">
+  @if (starships$ | async as starshipArray) {
+    @for (starship of starshipArray; track $index) {
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ starship.name }}</h5>
+          <p class="card-text">Model: {{ starship.model }}</p>
+          <a [routerLink]="['/starship', starship.url.split('/').slice(-2, -1)[0]]" class="btn btn-primary">Details</a>
+        </div>
+      </div>
+    }
+  } @else {
+    <p>Loading starships...</p>
+  }
+</div>-->
 
-
-  

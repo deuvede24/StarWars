@@ -1,35 +1,37 @@
 .starships-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #111;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  margin-top: 20px;  /* Ajusta la posición vertical */
+}
+
+.starship {
+  width: 80%;
+  max-width: 600px;
+  background-color: #333;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #444;
   }
-  
-  .starship {
-    width: 80%;
-    max-width: 600px;
-    background-color: #333;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #444;
-    }
-  }
-  
-  .starship h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .starship p {
-    font-size: 1.2em;
-    color: #bbb;
-  }
+}
+
+.starship h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.starship p {
+  font-size: 1.2em;
+  color: #bbb;
+}
+
   
  

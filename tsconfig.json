@@ -14,20 +14,38 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
+
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["src/app/*"]
+    },
+    "resolveJsonModule": true,
+
     "useDefineForClassFields": false,
+    "forceConsistentCasingInFileNames": true,
     "lib": [
       "ES2022",
       "dom"
     ]
   },
+  
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+    "strictTemplates": true,
+    "_enabledBlockTypes": [
+      "if", "switch", "for", "defer"
+     ]
+  },
+  "include": ["src/**/*.ts", "src/**/*.html"],
+  "exclude": ["node_modules"]
 }
+
+
+
+   
