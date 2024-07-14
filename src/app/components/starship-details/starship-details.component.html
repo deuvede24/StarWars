@@ -51,7 +51,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-12 col-xl-7 col-xxl-7 text-center mt-4 mb-4 card-custom">
-            <img [src]="starship.imageUrl"   alt="{{ starship.name }}" class="img-fluid starship" />
+            <img [src]="starship.imageUrl" (error)="imageError($event)"  alt="{{ starship.name }}" class="img-fluid starship" />
           </div>
           <div class="col-12 col-xl-5 col-xxl-5">
             <ul class="m-0">

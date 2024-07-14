@@ -59,7 +59,7 @@ export class StarshipDetailsComponent implements OnInit {
   starship$!: Observable<Starship>;
   //imageUrl: string = '';
   loading: boolean = true;
-  errorImageUrl: string = 'path/to/backup/image.jpg';
+  errorImageUrl: string = 'https://starwars-visualguide.com/assets/img/big-placeholder.jpg';
 
   constructor(
     private route: ActivatedRoute,
