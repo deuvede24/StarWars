@@ -25,11 +25,8 @@ export class StarshipsListComponent implements OnInit {
     this.starships$ = this.starWarsService.getStarships().pipe(
      // map((response: StarshipApiResponse) => response.results)
     );
-  }
-  /*ngOnInit(): void {
-    this.starships$ = this.starWarsService.getStarships().pipe(
-      map(response => response.results)
-    );*/
+  }*/
+
     ngOnInit(): void {
     this.starships$ = this.starWarsService.getStarships().pipe(
       map((response) => response.results));}

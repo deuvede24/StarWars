@@ -1,44 +1,4 @@
-/*import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-starship-details',
-  standalone: true,
-  imports: [],
-  templateUrl: './starship-details.component.html',
-  styleUrl: './starship-details.component.scss'
-})
-export class StarshipDetailsComponent {
-
-}*/
-/*import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { StarWarsService } from '../../services/star-wars.service';
-import { Starship } from '../../interfaces/starship';
-import { CommonModule, AsyncPipe } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
-@Component({
-  selector: 'app-starship-details',
-  standalone: true,
-  templateUrl: './starship-details.component.html',
-  styleUrls: ['./starship-details.component.scss'],
-  imports: [CommonModule, RouterModule, AsyncPipe]
-})
-export class StarshipDetailsComponent implements OnInit {
-  starship$!: Observable<Starship>;
-
-  constructor(
-    private route: ActivatedRoute,
-    private starWarsService: StarWarsService
-  ) {}
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')!;
-    this.starship$ = this.starWarsService.getStarshipDetails(id);
-  }
-}
-*/
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -59,7 +19,8 @@ export class StarshipDetailsComponent implements OnInit {
   starship$!: Observable<Starship>;
   //imageUrl: string = '';
   loading: boolean = true;
-  errorImageUrl: string = 'https://starwars-visualguide.com/assets/img/big-placeholder.jpg';
+  //errorImageUrl: string = 'path/to/backup/image.jpg';
+    errorImageUrl: string = 'https://starwars-visualguide.com/assets/img/big-placeholder.jpg';
 
   constructor(
     private route: ActivatedRoute,
