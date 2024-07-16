@@ -1,112 +1,95 @@
 .navbar {
     background-color: #000000 !important;
     border-bottom: 1px solid #444;
-
     flex-direction: row;
     align-items: center;
-}
-
-.navbar-brand,
-.navbar-nav .nav-link {
+  }
+  
+  .navbar-brand,
+  .navbar-nav .nav-link {
     color: #fff;
-}
-
-.navbar-brand:hover,
-.navbar-nav .nav-link:hover {
-    color: hsl(49, 100%, 50%);
-}
-
-.navbar-custom {
-    // background-color: #333;
+  }
+  
+  .navbar-custom {
     background-color: #111;
     padding: 10px 0;
-
-    .logo {
-        img {
-            width: 350px;
-            height: auto;
-        }
+  
+    .container-fluid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
-
+  
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        width: 350px;
+        height: auto; /* Ajusta el tamaño del logo según sea necesario */
+      }
+    }
+  
     .nav-link {
-        color: #fcca04 !important;
-
-        &:hover {
-            color: #ccc !important;
-        }
+      color: #fcca04 !important;
+  
+      &:hover {
+        color: #ccc !important;
+      }
     }
-}
-
-
-.social-icon img {
-    width: 32px;
-    height: 332px;
-    margin-right: 15px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
-    /* Para amarillo, usa este filtro en lugar del de arriba */
-    /* filter: invert(92%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%); */
-    display: flex;
-    align-items: center;
-
-    &:hover {
-        opacity: 0.7;
-    }
-}
-
-.btn-light {
-    color: #000;
-    background-color: #fff;
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-custom .container-fluid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            width: 350px;
-            /* Ajusta el tamaño del logo según sea necesario */
-            height: auto;
-        }
-    }
-
+  
     .navbar-nav {
-        flex-direction: row;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 10px;
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
         align-items: center;
-        margin-top: 10px;
-
-        .nav-link {
-            color: #fff;
-
-            &:hover {
-                color: #ccc;
-            }
+      }
+  
+      .nav-link {
+        &:hover {
+          color: #ccc;
         }
+      }
     }
-
-}
-
-
-.navbar-custom .login-btn {
-    display: flex;
-    align-items: center;
-}
-.starship-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding-top: 20px; /* Ajusta según sea necesario */
-    background-color: black;
-    color: white;
+  
+    .social-icon img {
+      width: 32px;
+      height: 32px; /* Corrigiendo el tamaño de altura */
+      margin-right: 15px;
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
+      display: flex;
+      align-items: center;
+  
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  
+    .btn-light {
+      color: #000;
+      background-color: #fff;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .login-btn {
+      display: flex;
+      align-items: center;
+  
+      @media (max-width: 768px) {
+        margin-top: 10px;
+      }
+    }
   }
+  
+  
