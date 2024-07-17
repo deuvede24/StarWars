@@ -47,25 +47,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #111;
+  padding: 5px;
+  background-color: #000000!important;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
 .starship {
   width: 80%;
-  max-width: 600px;
+  max-width: 1000px;
   min-height: 150px; /* Ajusta esto para mantener un alto uniforme */
-  background-color: #333;
+  background-color: #2a2a2a;
   padding: 20px;
   margin: 10px 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
-  //display: flex;
-  //flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   //align-items: center; /* Centrar el contenido */
   height: 150px; /* Fijar la altura */
@@ -77,32 +77,17 @@
 
 
 
+
 .card-link {
   text-decoration: none;
   color: inherit;
-  width: 1000px; /* Ancho fijo para todas las tarjetas */
-  margin: 10px; /* Espaciado entre tarjetas */
-
-
-
+  width: 100%; /* Ancho fijo para todas las tarjetas */
+  margin: 8px 0; /* Espaciado entre tarjetas */
 }
 
 
 
-/*.starship h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
 
-.starship p {
-  font-size: 1.2em;
-  color: #bbb;
-}*/
-
-/*.starship h2, .starship p {
-  margin: 0; /* Para ajustar márgenes 
-  text-align: center;
-}*/
 .starship h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -115,6 +100,7 @@
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #bbb;
   text-align: left!important;
 }
 
