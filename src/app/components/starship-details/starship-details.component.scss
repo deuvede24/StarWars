@@ -8,11 +8,12 @@
 }
 
 .card {
-  background-color: #750303;
+  background-color: #1e1e1e;
   color: white;
   margin-bottom: 1rem;
   max-width: 1200px; /* Ancho máximo */
   width: 100%; /* Ocupar todo el ancho posible */
+  border-color: #f5b903;
 }
 
 .card-title {
@@ -55,4 +56,20 @@
 
 .more {
   text-align: left;
+}
+
+.btn-light {
+  background-color: #000; /* Fondo negro */
+  color: #f5b903; /* Texto amarillo */
+  border: 2px solid #f5b903; /* Borde amarillo */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #333; /* Fondo gris en hover */
+    color: #fff; /* Texto blanco en hover */
+    border-color: #333; /* Borde gris en hover */
+  }
 }

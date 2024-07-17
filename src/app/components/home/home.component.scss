@@ -1,4 +1,4 @@
-.container {
+/*.container {
     text-align: center;
     margin-top: 50px;
   }
@@ -6,6 +6,24 @@
   .btn-primary {
     background-color: #f5b903;
     border: none;
+  }*/
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .btn-primary {
+    background-color: black;
+    color: #fcca04;
+    border: 2px solid #fcca04;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #444;
+    color: white;
   }
   
   
