@@ -13,6 +13,8 @@
   <p>Loading starships...</p>
   }
 </div>-->
+
+<!--EL QUE FUCNIONA HASTA " WEEKS TO GO"
 <div class="row justify-content-center">
     <div class="starships-container col-12 d-flex justify-content-center">
       @if (starships$ | async; as resultObject) {
@@ -30,7 +32,7 @@
       <p>Loading starships...</p>
       }
     </div>
-    </div>
+    </div>-->
 
 
     <!--<div class="container mt-4">
@@ -64,3 +66,25 @@
     <p>Loading starships...</p>
   }
 </div>-->
+
+<div class="row justify-content-center">
+  <div class="starships-container col-12 d-flex justify-content-center">
+    @if (starships$ | async; as resultObject) {
+      @for (starship of resultObject; track $index) {
+        <a [routerLink]="['/starship', starship.url.split('/').slice(-2, -1)[0]]" class="card-link">
+          <div class="starships-container">
+            <div class="starship">
+              <h2 class="card-title">{{ starship.name }}</h2>
+              <p class="card-text">Model: {{ starship.model }}</p>
+            </div>
+          </div>
+        </a>
+      }
+      @if (hasMorePages) {
+        <button (click)="loadMore()" class="btn btn-light">View More</button>
+      }
+    } @else {
+      <p>Loading starships...</p>
+    }
+  </div>
+</div>
