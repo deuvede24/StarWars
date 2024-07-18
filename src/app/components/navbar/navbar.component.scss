@@ -94,3 +94,20 @@
   }
 }
 
+
+.navbar-custom {
+  background-color: #111;
+  padding: 10px 0;
+
+  .nav-tabs .nav-link {
+    color: #fcca04 !important;
+
+    &.active {
+      color: #ccc !important;
+    }
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+}
