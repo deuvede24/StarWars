@@ -26,4 +26,43 @@
     color: white;
   }
   
+  //
+
+  .container {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+  
+    .carousel {
+      margin-top: 20px;
+    }
+  
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
+    }
+  
+    .btn-primary {
+      background-color: #f5b903;
+      border: none;
+      color: #000;
+      &:hover {
+        background-color: #ffd700;
+      }
+    }
+  }
+  
+  .carousel-inner img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .lazyload {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  
+  .lazyloaded {
+    opacity: 1;
+  }
   

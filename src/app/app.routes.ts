@@ -91,3 +91,4 @@ export const appRoutes: Routes = [
   { path: 'starships', component: StarshipsListComponent },
   { path: 'starship/:id', component: StarshipDetailsComponent },
 ];
+
