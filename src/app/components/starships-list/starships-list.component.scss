@@ -109,3 +109,10 @@
   text-align: left;
   color: #bbb;
 }
+
+// Media queries
+@media (max-width: 768px) {
+  .starship {
+    width: 90%; // Asegura que las tarjetas ocupen más espacio en pantallas pequeñas
+  }
+}

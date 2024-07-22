@@ -89,10 +89,16 @@ export class StarshipsListComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && this.hasMorePages)
+ {
       this.loadMore();
     }
   }
 }
+
+//    if (window.innerWidth > 768 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100)
+//    if( (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) (other option)
+
+
 
 
