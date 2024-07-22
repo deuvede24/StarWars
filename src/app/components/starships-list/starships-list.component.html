@@ -52,10 +52,14 @@
     <!--@if (hasMorePages) {
         <button (click)="loadMore()" class="btn btn-light">View More</button>
     }-->
-    <div class="d-flex justify-content-center my-3">
+    @if (hasMorePages) {
+      <div class="d-flex justify-content-center my-3">
+        <button (click)="loadMore()" class="btn btn-light">View More</button>
+      </div>
+    }
+   <!-- <div class="d-flex justify-content-center my-3">
       <button (click)="loadMore()" class="btn btn-light">View More</button>
-      <!-- <button (click)="loadMore()" class="btn btn-light d-md-none">View More</button>-->
-    </div>
+    </div>-->
     } @else {
     <p>Loading starships...</p>
     }

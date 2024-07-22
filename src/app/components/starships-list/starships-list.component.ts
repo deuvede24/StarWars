@@ -41,7 +41,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { StarWarsService } from '../../services/star-wars.service';
 import { Starship } from '../../interfaces/starship';
-import { Observable, of, concat } from 'rxjs';
+import { Observable, BehaviorSubject, of, concat  } from 'rxjs';
 import { catchError, map, switchMap, scan, tap } from 'rxjs/operators';
 import { AsyncPipe } from '@angular/common';
 
@@ -53,7 +53,8 @@ import { AsyncPipe } from '@angular/common';
   imports: [CommonModule, RouterModule, AsyncPipe]
 })
 export class StarshipsListComponent implements OnInit {
-  starships$!: Observable<Starship[]>;
+  //starships$!: Observable<Starship[]>;
+  starships$ = new BehaviorSubject<Starship[]>([]);
   private currentPage = 1;
   private loading = false;
   hasMorePages = true;
@@ -64,7 +65,9 @@ export class StarshipsListComponent implements OnInit {
     this.loadMore();
   }
 
-  loadMore(): void {
+
+
+  /*loadMore(): void {
     if (this.loading || !this.hasMorePages) return;
 
     this.loading = true;
@@ -79,8 +82,8 @@ export class StarshipsListComponent implements OnInit {
         this.hasMorePages = false;
         return of([]);
       }),
-      //tap(() => this.loading = false)
-      tap(() => {
+      tap(() => this.loading = false)
+      /*tap(() => {
         this.loading = false;
         setTimeout(() => {}, 700); // Añade un retraso de 500ms entre las llamadas
       })
@@ -89,16 +92,41 @@ export class StarshipsListComponent implements OnInit {
     this.starships$ = this.starships$
       ? concat(this.starships$, starshipsPage$)
       : starshipsPage$;
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    //if (window.innerWidth > 768 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight)
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight)  {
-      this.loadMore();
+  }*/
+      loadMore(): void {
+        if (this.loading || !this.hasMorePages) return;
+    
+        this.loading = true;
+    
+        this.starWarsService.getStarships(this.currentPage).pipe(
+          map(response => {
+            this.hasMorePages = !!response.next;
+            this.currentPage++;
+            return response.results;
+          }),
+          catchError(() => {
+            this.hasMorePages = false;
+            return of([]);
+          }),
+          tap(() => this.loading = false)
+        ).subscribe({
+          next: (newStarships) => {
+            const currentStarships = this.starships$.getValue();
+            this.starships$.next([...currentStarships, ...newStarships]);
+          },
+          error: () => {
+            this.loading = false;
+          }
+        });
+      }
+    
+      @HostListener('window:scroll', [])
+      onScroll(): void {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 700) {
+          setTimeout(() => this.loadMore(), 500);
+        }
+      }
     }
-  }
-}
 //if( (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) (other option)
 //if (window.innerWidth > 768 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100)
 //if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && this.hasMorePages)
