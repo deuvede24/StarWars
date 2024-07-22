@@ -48,16 +48,15 @@
   flex-direction: column;
   align-items: center;
   padding: 5px;
-  background-color: #000000!important;
+  background-color: #000000 !important;
   color: #fff;
   margin-top: 10px;
 }
 
-
 .starship {
   width: 80%;
   max-width: 1000px;
-  min-height: 150px; /* Ajusta esto para mantener un alto uniforme */
+  min-height: 150px;
   background-color: #2a2a2a;
   padding: 20px;
   margin: 10px 0;
@@ -67,52 +66,48 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //align-items: center; /* Centrar el contenido */
-  height: 150px; /* Fijar la altura */
+  height: 150px;
   &:hover {
     background-color: #444;
   }
 }
 
-
-
-
-
 .card-link {
   text-decoration: none;
   color: inherit;
-  width: 100%; /* Ancho fijo para todas las tarjetas */
-  margin: 8px 0; /* Espaciado entre tarjetas */
+  width: 100%;
+  margin: 8px 0;
 }
 
-
-
-
-.starship h2 {
+.starship h2, .card-title {
   font-size: 1.5em;
   margin-bottom: 10px;
+  color: #bbb;
 }
-.starship p {
+
+.starship p, .card-text {
   font-size: 1.2em;
   color: #bbb;
 }
 
-.card-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #bbb;
-  text-align: left!important;
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #000;
+  display: none;
+  &:hover {
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+  }
 }
 
-.card-text {
-  font-size: 1rem;
-  text-align: left;
-  color: #bbb;
-}
-
-// Media queries
 @media (max-width: 768px) {
   .starship {
-    width: 90%; // Asegura que las tarjetas ocupen más espacio en pantallas pequeñas
+    width: 90%;
+   // padding: 15px;
+  }
+
+  .btn-light {
+    display: block;
   }
 }

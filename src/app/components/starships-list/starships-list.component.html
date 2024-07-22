@@ -80,9 +80,13 @@
           </div>
         </a>
       }
-      @if (hasMorePages) {
+      <!--@if (hasMorePages) {
         <button (click)="loadMore()" class="btn btn-light">View More</button>
-      }
+    }--> 
+    <div class="d-flex justify-content-center my-3">
+      <button (click)="loadMore()" class="btn btn-light">View More</button>
+     <!-- <button (click)="loadMore()" class="btn btn-light d-md-none">View More</button>-->
+    </div>
     } @else {
       <p>Loading starships...</p>
     }

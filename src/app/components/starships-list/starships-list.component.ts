@@ -56,7 +56,7 @@ export class StarshipsListComponent implements OnInit {
   starships$!: Observable<Starship[]>;
   private currentPage = 1;
   private loading = false;
-   hasMorePages = true;
+  hasMorePages = true;
 
   constructor(private starWarsService: StarWarsService) { }
 
@@ -79,25 +79,30 @@ export class StarshipsListComponent implements OnInit {
         this.hasMorePages = false;
         return of([]);
       }),
-      tap(() => this.loading = false)
+      //tap(() => this.loading = false)
+      tap(() => {
+        this.loading = false;
+        setTimeout(() => {}, 700); // Añade un retraso de 500ms entre las llamadas
+      })
     );
 
-    this.starships$ = this.starships$ 
+    this.starships$ = this.starships$
       ? concat(this.starships$, starshipsPage$)
       : starshipsPage$;
   }
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && this.hasMorePages)
- {
+    //if (window.innerWidth > 768 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight)
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight)  {
       this.loadMore();
     }
   }
 }
-
-//    if (window.innerWidth > 768 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100)
-//    if( (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) (other option)
+//if( (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) (other option)
+//if (window.innerWidth > 768 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100)
+//if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && this.hasMorePages)
+//if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) 
 
 
 
