@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "lolo@hotmail.com",
+      "password": "$2a$10$ZfDPW.czA80WetsxtfgjpOuOQeDLa1fbjKdCGHVl5g0YjLjdujrfC",
+      "fullName": "lolo lopez",
+      "confirmPassword": "77777j",
+      "id": 1
+    }
+  ]
+}
