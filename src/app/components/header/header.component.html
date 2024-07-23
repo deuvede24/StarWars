@@ -29,9 +29,9 @@
 </div>-->
 
 
-<div class="container-fluid py-2 header-container">
+<!--<div class="container-fluid py-2 header-container">
   <div class="row align-items-center flex-column flex-md-row">
-    <!-- Redes Sociales -->
+
     <div class="social-icons col-12 col-md-auto d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
       <a href="https://www.facebook.com/StarWars" target="_blank">
         <img src="icons/facebook.svg" alt="Facebook" />
@@ -46,7 +46,7 @@
         <img src="icons/youtube.svg" alt="Instagram" />
       </a>
     </div>
-    <!-- Log In / Sign Up / Log Out -->
+   
     <div class="login-btn col-12 col-md-auto d-flex justify-content-center mb-2 mb-md-0 order-2 order-md-3">
       @if (!authService.isLoggedIn) {
       <a routerLink="/login" class="me-2 text-secondary">LOG IN</a>
@@ -55,6 +55,42 @@
       }
       @else {
       <a (click)="logout()" class="ms-2 text-secondary">LOG OUT</a>
+      }
+    </div>
+    
+    <div class="col-12 col-md d-flex justify-content-center justify-content-md-center order-3 order-md-2">
+      <img src="img/sw-logo.svg" alt="Star Wars Logo" class="img-fluid logo">
+    </div>
+  </div>
+</div>-->
+
+
+<div class="container-fluid py-2 header-container">
+  <div class="row align-items-center flex-column flex-md-row">
+    <!-- Redes Sociales -->
+    <div class="social-icons col-12 col-md-auto d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+      <a href="https://www.facebook.com/StarWars" target="_blank">
+        <img src="icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://x.com/starwars" target="_blank">
+        <img src="icons/x-twitter.svg" alt="Twitter" />
+      </a>
+      <a href="https://www.instagram.com/starwars" target="_blank">
+        <img src="icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.youtube.com/starwars" target="_blank">
+        <img src="icons/youtube.svg" alt="YouTube" />
+      </a>
+    </div>
+    <!-- Log In / Sign Up / Log Out -->
+    <div class="login-btn col-12 col-md-auto d-flex justify-content-center mb-2 mb-md-0 order-2 order-md-3">
+      @if (!authService.isLoggedIn) {
+      <a routerLink="/login" class="me-2 text-secondary">LOG IN</a>
+      <span class="text-secondary">//</span>
+      <a routerLink="/register" class="ms-2 text-secondary">SIGN UP</a>
+      }
+      @else {
+      <a (click)="logout()" class="ms-2 text-secondary" style="cursor: pointer;">LOG OUT</a>
       }
     </div>
     <!-- Logo -->

@@ -27,6 +27,19 @@
     width: 100%;
   }
   
+  input:focus {
+    border-color: #FFD700 !important;
+    box-shadow: 0 0 5px #FFD700 !important;
+  }
+  
+  .is-invalid {
+    border-color: #ff0000 !important;
+  }
+  
+  .text-danger {
+    color: #ff0000 !important;
+  }
+  
   .btn {
     background-color: #fcca04;
     border: none;
@@ -42,16 +55,12 @@
     background-color: #e6b800;
   }
   
-  .text-danger {
-    color: red;
-  }
-  
   .text-center {
     text-align: center;
   }
   
   .mt-5 {
-    margin-top: 3rem;
+    margin-top: 1.5rem; // Reduce top margin
   }
   
   .shadow {
@@ -60,5 +69,12 @@
   
   .border {
     border: 1px solid #444;
+  }
+  
+  .form-custom {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
   }
   

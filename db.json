@@ -6,6 +6,27 @@
       "fullName": "lolo lopez",
       "confirmPassword": "77777j",
       "id": 1
+    },
+    {
+      "email": "rock@hotmail.com",
+      "password": "$2a$10$XXsS6o7tJxxoRZaJJSq6BuPPMsx.caUe7f7J5Agk.J0.7DkcFsGQu",
+      "fullName": "Roko Rock",
+      "confirmPassword": "454545J",
+      "id": 2
+    },
+    {
+      "email": "puppy@gmail.com",
+      "password": "$2a$10$0bq.ShzFo6bG1gzekLDXd.Xx2q/5hiRK2eyeQawGBADH05S2U9UWW",
+      "fullName": "Puperto Parte Petit",
+      "confirmPassword": "33333p",
+      "id": 3
+    },
+    {
+      "email": "akela@gmail.com",
+      "password": "$2a$10$gi2oX9YwuSx2d2CHVm5DheixQqS4202L8UEMWqPTq/rJzhBqg8MMa",
+      "fullName": "Akela",
+      "confirmPassword": "11111a",
+      "id": 4
     }
   ]
 }
