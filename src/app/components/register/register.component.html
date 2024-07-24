@@ -323,7 +323,7 @@
             @if (registerForm.controls['confirmPassword'].errors?.['required']) {
               <small>Confirm Password is required</small>
             }
-            @if (registerForm.controls['confirmPassword'].errors?.['mismatch'] || registerForm.hasError('mismatch')) {
+            @if (registerForm.controls['confirmPassword'].errors?.['mismatch']) {
               <small>Passwords must match</small>
             }
           }

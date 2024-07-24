@@ -34,6 +34,27 @@
       "fullName": "Sara",
       "confirmPassword": "4444jj",
       "id": 5
+    },
+    {
+      "email": "carlos@gmail.com",
+      "password": "$2a$10$Hwm96TMiM0/Ad/nTKfNndeqFbdkSXzX461RJ6NIaFsB/uEg2C363.",
+      "fullName": "carlos",
+      "confirmPassword": "12345ñ",
+      "id": 6
+    },
+    {
+      "email": "ml@gmd.com",
+      "password": "$2a$10$7y8pWtlVN0VEfVlZGE2xkOZFEjebufzMoRPyh8lndIgo2DXwwHr1.",
+      "fullName": "María Lopez",
+      "confirmPassword": "111111",
+      "id": 7
+    },
+    {
+      "email": "tiki@hotmail.com",
+      "password": "$2a$10$tb9zaP.xG6p.LLukkv7x6OddLOlF.Uu73JcqMs2yRCPVNbLwwB5FG",
+      "fullName": "tikitiki",
+      "confirmPassword": "tocal2",
+      "id": 8
     }
   ]
 }
