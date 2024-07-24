@@ -124,13 +124,15 @@
     <!-- Log In / Sign Up / Log Out -->
     <div class="login-btn col-12 col-md-auto d-flex flex-column align-items-center mb-2 mb-md-0 order-2 order-md-3 text-center">
       @if (!authService.isLoggedIn) {
-      <a routerLink="/login" class="me-2 text-secondary">LOG IN</a>
-      <span class="text-secondary">//</span>
-      <a routerLink="/register" class="ms-2 text-secondary">SIGN UP</a>
+        <div class="d-flex flex-column align-items-center">
+          <a routerLink="/login" class="text-secondary">LOG IN</a>
+          <span class="divider"></span>
+          <a routerLink="/register" class="text-secondary">SIGN UP</a>
+        </div>
       }
       @else {
-      <span>Hello, {{ authService.currentUser?.fullName }}</span>
-      <a (click)="logout()" class="ms-2 text-secondary" style="cursor: pointer;">LOG OUT</a>
+        <span>Hello, {{ authService.currentUser?.fullName }}</span>
+        <a (click)="logout()" class="text-secondary mt-1 mt-md-0 ms-md-2" style="cursor: pointer;">LOG OUT</a>
       }
     </div>
   </div>

@@ -27,6 +27,13 @@
       "fullName": "Akela",
       "confirmPassword": "11111a",
       "id": 4
+    },
+    {
+      "email": "sara@gmail.com",
+      "password": "$2a$10$CsCBL/EfIAJ.dP6H9UajKu/g9dcXzcNFGmN5J5Cl4sEF5996k/NQu",
+      "fullName": "Sara",
+      "confirmPassword": "4444jj",
+      "id": 5
     }
   ]
 }
