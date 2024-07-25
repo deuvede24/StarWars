@@ -1,7 +1,8 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: black!important;  /* Fondo negro */
-  color: white;  /* Texto blanco */
+  background-color: black !important;
+  /* Fondo negro */
+  color: white;
 }
 
 .navbar {
@@ -15,7 +16,7 @@ body {
 
 .card {
   margin: 10px 0;
-  background-color: #121212;  /* Fondo de las tarjetas */
+  background-color: #121212;
   color: white;
 }
 
@@ -23,13 +24,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;  /* Empuja hacia arriba */
+  justify-content: flex-start; //Empuja hacia arriba
   min-height: 100vh;
-  padding-top: 20px;  /* Ajusta según sea necesario */
+  padding-top: 20px;
 }
 
 .btn-primary {
-  background-color: #f4f5f7;  /* Color del botón */
+  background-color: #f4f5f7;
   border-color: #ccb100;
 }
-

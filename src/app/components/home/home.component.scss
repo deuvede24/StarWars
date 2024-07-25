@@ -1,60 +1,57 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
 
-  .container {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .btn-primary {
-    background-color: black;
-    color: #fcca04;
-    border: 2px solid #fcca04;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #444;
-    color: white;
-  }
-  
-  //
+.btn-primary {
+  background-color: black;
+  color: #fcca04;
+  border: 2px solid #fcca04;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .container {
-    text-align: center;
-    margin-top: 50px;
-    color: #fff;
-  
-    .carousel {
-      margin-top: 20px;
-    }
-  
-    .carousel-item img {
-      height: 400px;
-      object-fit: cover;
-    }
-  
-    .btn-primary {
-      background-color: #f5b903;
-      border: none;
-      color: #000;
-      &:hover {
-        background-color: #ffd700;
-      }
-    }
+.btn-primary:hover {
+  background-color: #444;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+
+  .carousel {
+    margin-top: 20px;
   }
-  
-  .carousel-inner img {
-    max-height: 500px;
+
+  .carousel-item img {
+    height: 400px;
     object-fit: cover;
   }
-  
-  .lazyload {
-    opacity: 0;
-    transition: opacity 300ms;
+
+  .btn-primary {
+    background-color: #f5b903;
+    border: none;
+    color: #000;
+
+    &:hover {
+      background-color: #ffd700;
+    }
   }
-  
-  .lazyloaded {
-    opacity: 1;
-  }
-  
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.lazyload {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.lazyloaded {
+  opacity: 1;
+}

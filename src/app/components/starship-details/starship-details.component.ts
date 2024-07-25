@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -17,25 +16,14 @@ import { RouterModule } from '@angular/router';
 })
 export class StarshipDetailsComponent implements OnInit {
   starship$!: Observable<Starship>;
-  //imageUrl: string = '';
   loading: boolean = true;
-  //errorImageUrl: string = 'path/to/backup/image.jpg';
-    errorImageUrl: string = 'https://starwars-visualguide.com/assets/img/big-placeholder.jpg';
+  errorImageUrl: string = 'https://starwars-visualguide.com/assets/img/big-placeholder.jpg';
 
   constructor(
     private route: ActivatedRoute,
     private starWarsService: StarWarsService
   ) { }
 
-  /*ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')!;
-    this.starship$ = this.starWarsService.getStarshipDetails(id);
-    this.starship$.subscribe(starship => {
-      this.loading = false;
-      this.imageUrl = this.getImageUrl(starship.url);
-       this.imageUrl = this.starWarsService.getStarshipImageUrl(starship.url);
-    });
-  }*/
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')!;
@@ -50,26 +38,10 @@ export class StarshipDetailsComponent implements OnInit {
     );
   }
 
-
-  /* ngOnInit(): void {
-     const id = this.route.snapshot.paramMap.get('id')!;
-     this.starship$ = this.starWarsService.getStarshipDetails(id);
-     this.starship$.subscribe(starship => {
-       this.loading = false;
-       this.imageUrl = this.starWarsService.getStarshipImageUrl(starship.url);
-     });
-   }*/
-
-
   imageError(event: any): void {
     event.target.src = this.errorImageUrl;
   }
-  
 
-  /*getImageUrl(url: string): string {
-    // Mock implementation, replace with actual logic to get the image URL
-    return 'https://via.placeholder.com/600x400'; // Replace with actual logic
-  }*/
 }
 
 

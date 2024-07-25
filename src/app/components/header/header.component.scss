@@ -21,7 +21,7 @@
       margin-right: 15px;
 
       img {
-        width: 24px; // Reducir el tamaño de los íconos
+        width: 24px; 
         height: 24px;
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
         
@@ -42,10 +42,10 @@
     .logo {
       max-width: 100%;
       height: auto;
-      width: 250px; // Ajustar el tamaño del logo
+      width: 250px;
 
       @media (max-width: 768px) {
-        width: 150px; // Ajusta para pantallas pequeñas
+        width: 150px;
       }
     }
   }
@@ -68,7 +68,7 @@
     }
 
     .divider {
-      width: 150px; // Ajustar el ancho del divisor
+      width: 150px; 
       height: 2px;
       background-color: #fcca04;
       margin: 5px 0;
@@ -102,7 +102,7 @@
 
 @media (min-width: 1200px) {
   .header-container {
-    padding: 20px 50px; // Ajusta el padding para pantallas grandes si es necesario
+    padding: 20px 50px; 
   }
 }
 
@@ -113,6 +113,6 @@
 
 .header-container .login-btn {
   margin-left: auto;
-  padding-right: 20px; // Ajusta este valor según sea necesario
+  padding-right: 20px;
 }
 

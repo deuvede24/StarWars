@@ -55,6 +55,13 @@
       "fullName": "tikitiki",
       "confirmPassword": "tocal2",
       "id": 8
+    },
+    {
+      "email": "dama@hotmail.com",
+      "password": "$2a$10$Xw7M1Mg9chv8Wmb1ezIuiOrImaVMutXIWPsWEBzh2zNbeuCnsK2ne",
+      "fullName": "Damira",
+      "confirmPassword": "111111",
+      "id": 9
     }
   ]
 }
