@@ -41,7 +41,6 @@ This project is a web application based on Angular that allows users to register
 
 This project provides a solid foundation for a Star Wars starship management application, ensuring that only authenticated users can access the critical functionalities of the application.
 
-
 ### Exercises (1-7):
 
 1. **Project Structure**:
@@ -101,11 +100,11 @@ This project provides a solid foundation for a Star Wars starship management app
 
    ```
 
-2. Install project dependencies::
+2. Install project dependencies:
 
-   ```npm install
-   
-   ```
+    ```npm install
+
+    ```
 
 3. Install JSON Server and JSON Server Auth:
 
@@ -113,9 +112,9 @@ This project provides a solid foundation for a Star Wars starship management app
 
 4. Create the db.json file in the root of the project with the following content::
 
-  {
-    "users": []
-  }
+{
+"users": []
+}
 
 5. Start the backend with JSON Server Auth:
 
@@ -124,9 +123,3 @@ This project provides a solid foundation for a Star Wars starship management app
 6. Start the Angular application:
 
    ng serve
-
-
-
-
-  
-
