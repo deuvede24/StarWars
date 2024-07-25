@@ -102,7 +102,8 @@ This project provides a solid foundation for a Star Wars starship management app
 
 2. Install project dependencies:
 
-    ```npm install
+    ```bash 
+    npm install
 
     ```
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors, AbstractControlOptions } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service'; 
+import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -32,10 +32,10 @@ export class RegisterComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required]]
     }, formOptions);
-    
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   checkPasswords(group: AbstractControl): ValidationErrors | null {
     const password = group.get('password')?.value;
@@ -54,25 +54,33 @@ export class RegisterComponent implements OnInit {
     return control ? control.invalid && (control.dirty || control.touched || this.submitted) : false;
   }
 
-  register() {
+  register(): void {
     this.submitted = true;
-
     if (this.registerForm.invalid) {
       this.errorMessage = 'Please fill out the form correctly.';
-      this.markAllFieldsAsTouched(); // Marca todos los campos como tocados
+      this.markAllFieldsAsTouched();
       return;
     }
 
-    this.authService.register(this.registerForm.value).subscribe({
+    const { fullName, email, password } = this.registerForm.value;
+    this.authService.register({ fullName, email, password }).subscribe({
       next: () => {
-        this.router.navigate(['/home']);
+        this.authService.login({ email, password }).subscribe({
+          next: () => {
+            this.router.navigate(['/starships']);
+          },
+          error: () => {
+            this.errorMessage = 'Registration successful, but login failed. Please try logging in manually.';
+            this.router.navigate(['/login']);
+          }
+        });
       },
-      error: (error) => {
-        let errorMessage = 'Unknown error';
-        if (error.status === 400) {
-          errorMessage = 'The user already exists. Please try with another email.';
-        } 
-        this.errorMessage = errorMessage;
+      error: (err) => {
+        if (err.status === 400) {
+          this.errorMessage = 'The user already exists. Please try with another email.';
+        } else {
+          this.errorMessage = 'An unknown error occurred. Please try again.';
+        }
       }
     });
   }
