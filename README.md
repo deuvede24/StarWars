@@ -102,25 +102,34 @@ This project provides a solid foundation for a Star Wars starship management app
 
 2. Install project dependencies:
 
-    ```bash 
-    npm install
+   ```bash
+   npm install
 
-    ```
+   ```
 
 3. Install JSON Server and JSON Server Auth:
 
+   ```bash
    npm install -D json-server@0.17.4 json-server-auth
+   ```
 
 4. Create the db.json file in the root of the project with the following content::
 
-{
-"users": []
-}
+   ```bash
+
+   {
+    "users": []
+   }
+   ```
 
 5. Start the backend with JSON Server Auth:
 
+   ```bash
    npx json-server-auth db.json
+   ```
 
 6. Start the Angular application:
 
+   ```bash
    ng serve
+   ```
